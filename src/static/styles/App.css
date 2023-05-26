@@ -1,0 +1,9 @@
+body {
+    margin: 0 !important;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
