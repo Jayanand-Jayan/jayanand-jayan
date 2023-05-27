@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/jayanand-jayan/static/css/main.c40b4c51.css",
+    "main.js": "/jayanand-jayan/static/js/main.f3357710.js",
+    "static/media/Matplotlib.png": "/jayanand-jayan/static/media/Matplotlib.1f3cb36363d0eb2c163f.png",
+    "static/media/Atom.png": "/jayanand-jayan/static/media/Atom.5766841b8ff6a4d48a0d.png",
+    "static/media/Python.png": "/jayanand-jayan/static/media/Python.dea924d737bb84eb9ce3.png",
+    "static/media/VSCode.png": "/jayanand-jayan/static/media/VSCode.19edc3fbac1c451f289d.png",
+    "static/media/MyPicture.jpeg": "/jayanand-jayan/static/media/MyPicture.a033d66969a55e7b77b0.jpeg",
+    "static/media/TensorFlow.png": "/jayanand-jayan/static/media/TensorFlow.2460eb72b66735a0862b.png",
+    "static/media/FastAPI.png": "/jayanand-jayan/static/media/FastAPI.30be275110634ca3d16c.png",
+    "static/media/R.png": "/jayanand-jayan/static/media/R.308b951cfbdb7298effe.png",
+    "static/media/Scikit.png": "/jayanand-jayan/static/media/Scikit.e323786f2489aa601b90.png",
+    "static/media/JavaScript.png": "/jayanand-jayan/static/media/JavaScript.166865dacb77d214f485.png",
+    "static/media/Seaborn.png": "/jayanand-jayan/static/media/Seaborn.51be06478e86a85d5ce0.png",
+    "static/media/CSS.png": "/jayanand-jayan/static/media/CSS.9407ad358cdb22b8b1f0.png",
+    "static/media/MSExcel.png": "/jayanand-jayan/static/media/MSExcel.2971241aa22d32ae670c.png",
+    "static/media/Cpp.jpg": "/jayanand-jayan/static/media/Cpp.8eb73fdeb36cef337545.jpg",
+    "static/media/PyTorch.png": "/jayanand-jayan/static/media/PyTorch.e233fc48a48fde996610.png",
+    "static/media/Flask.png": "/jayanand-jayan/static/media/Flask.7f66c78e2193b7d98681.png",
+    "static/media/Java.png": "/jayanand-jayan/static/media/Java.16c792fa57ae56a8004d.png",
+    "static/media/LinkedIn.png": "/jayanand-jayan/static/media/LinkedIn.a9620a292f74ef763084.png",
+    "static/media/Pandas.png": "/jayanand-jayan/static/media/Pandas.1d2d1de1eb9ca6eebd84.png",
+    "static/media/JQuery.png": "/jayanand-jayan/static/media/JQuery.347f93d8463ec15aa303.png",
+    "static/media/Keras.png": "/jayanand-jayan/static/media/Keras.50b636f01e50d9f2d513.png",
+    "static/media/C.png": "/jayanand-jayan/static/media/C.4d66bd5ab38496bd6f4f.png",
+    "index.html": "/jayanand-jayan/index.html",
+    "main.c40b4c51.css.map": "/jayanand-jayan/static/css/main.c40b4c51.css.map",
+    "main.f3357710.js.map": "/jayanand-jayan/static/js/main.f3357710.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c40b4c51.css",
+    "static/js/main.f3357710.js"
+  ]
+}
