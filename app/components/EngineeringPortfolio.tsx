@@ -243,7 +243,7 @@ export function EngineeringPortfolio() {
       <div className="border-t border-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <Terminal className="w-16 h-16 mx-auto mb-6 text-blue-500" />
-          <h2 className="mb-6 text-white">Let's Build Something Amazing</h2>
+          <h2 className="mb-6 text-white">Let&apos;s Build Something Amazing</h2>
           <p className="text-xl text-slate-300 mb-8">
             Always excited to collaborate on innovative projects and tackle challenging technical problems.
           </p>

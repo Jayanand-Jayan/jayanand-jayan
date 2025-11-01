@@ -130,9 +130,9 @@ export function MusicPortfolio() {
           <Heart className="w-16 h-16 mx-auto mb-6 opacity-90" />
           <h2 className="mb-6">Musical Philosophy</h2>
           <p className="text-xl leading-relaxed opacity-95">
-            "Music is the bridge between tradition and innovation. By honoring the ancient ragas of Carnatic music
+            &quot;Music is the bridge between tradition and innovation. By honoring the ancient ragas of Carnatic music
             while embracing modern technology, we create something timeless yet fresh. Every note carries the weight
-            of centuries and the excitement of discovery."
+            of centuries and the excitement of discovery.&quot;
           </p>
         </div>
       </div>
