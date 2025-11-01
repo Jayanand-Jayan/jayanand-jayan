@@ -1,0 +1,37 @@
+# .pre-commit-config.yaml
+#
+# This configuration file is used by the pre-commit framework.
+# To use it, ensure you have run: `pip install pre-commit`
+# And then: `pre-commit install` in your repository root.
+
+repos:
+  # 1. Standard pre-commit hooks for general cleanup
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    # Update this revision to the latest stable release
+    rev: v4.6.0
+    hooks:
+      # Removes trailing whitespace from all files
+      - id: trailing-whitespace
+      # Ensures all files end with a newline character
+      - id: end-of-file-fixer
+      # Detects and prevents large files from being added
+      - id: check-added-large-files
+      # Validates YAML file syntax
+      - id: check-yaml
+      # Validates JSON file syntax
+      - id: check-json
+      # Checks that no files contain a merge conflict string
+      - id: check-merge-conflict
+      # Prevents committing debug statements (like console.log in JS)
+      - id: debug-statements
+
+  # 2. Prettier for code formatting (JavaScript, JSON, CSS, Markdown, etc.)
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    # Update this revision to the latest stable release
+    rev: v4.0.0-alpha.8 # A recent, stable-ish version
+    hooks:
+      - id: prettier
+        # Prettier will run against these file types
+        types_or: [javascript, json, markdown, css, yaml]
+        # Optional: Uncomment if you want to pass specific arguments to prettier
+        # args: [--print-width=80, --tab-width=2]
