@@ -87,10 +87,19 @@ export function EducationPortfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div className="fixed inset-0 z-0">
+        <ImageWithFallback
+          src="https://images.unsplash.com/photo-1601327707681-63fac29e4bf1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWJyYXJ5JTIwYm9va3MlMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzYyMDIyNzQwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/95 via-purple-950/90 to-indigo-900/95" />
+      </div>
+
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20" />
+      <div className="relative z-10 overflow-hidden text-white">
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -117,10 +126,10 @@ export function EducationPortfolio() {
       </div>
 
       {/* Degrees Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-indigo-900">Academic Degrees</h2>
-          <p className="text-indigo-700">Formal education from prestigious institutions</p>
+          <h2 className="mb-4 text-white">Academic Degrees</h2>
+          <p className="text-indigo-200">Formal education from prestigious institutions</p>
         </div>
         <div className="space-y-8">
           {degrees.map((degree, index) => (
@@ -170,11 +179,11 @@ export function EducationPortfolio() {
       </div>
 
       {/* Achievements Section */}
-      <div className="bg-white/60 backdrop-blur">
+      <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
-            <h2 className="mb-4 text-indigo-900">Academic Achievements</h2>
-            <p className="text-indigo-700">Recognition and accomplishments</p>
+            <h2 className="mb-4 text-white">Academic Achievements</h2>
+            <p className="text-indigo-200">Recognition and accomplishments</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {achievements.map((achievement, index) => {
@@ -198,10 +207,10 @@ export function EducationPortfolio() {
       </div>
 
       {/* Certifications Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-indigo-900">Professional Certifications</h2>
-          <p className="text-indigo-700">Continuous learning and skill development</p>
+          <h2 className="mb-4 text-white">Professional Certifications</h2>
+          <p className="text-indigo-200">Continuous learning and skill development</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-6">
           {certifications.map((cert, index) => (
@@ -226,7 +235,7 @@ export function EducationPortfolio() {
       </div>
 
       {/* Relevant Coursework Section */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+      <div className="relative z-10 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <BookOpen className="w-16 h-16 mx-auto mb-6 opacity-90" />

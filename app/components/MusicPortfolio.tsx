@@ -1,66 +1,79 @@
-import { Music2, Mic2, Radio, Heart, PlayCircle } from 'lucide-react';
+import { Music2, Mic2, Radio, Heart, PlayCircle, Instagram, Award, Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function MusicPortfolio() {
-  const performances = [
+  const achievements = [
     {
-      title: "Thyagaraja Aradhana Concert",
-      venue: "Chennai Music Academy",
-      date: "January 2024",
-      description: "Traditional Carnatic vocal performance featuring compositions from the Trinity"
+      title: "Arangettam",
+      venue: "Mumbai",
+      date: "2018",
+      description: "Formal debut Carnatic vocal performance — a milestone marking the completion of foundational training under the guru-shishya tradition"
     },
     {
-      title: "Fusion Night",
-      venue: "Blue Frog, Bangalore",
-      date: "November 2023",
-      description: "Contemporary fusion of Carnatic ragas with electronic beats"
-    },
-    {
-      title: "Margazhi Festival",
-      venue: "Narada Gana Sabha",
-      date: "December 2023",
-      description: "Early morning Carnatic concert during the auspicious Margazhi season"
+      title: "2nd Prize — National Tabla Competition",
+      venue: "Hindustan Times",
+      date: "National Level",
+      description: "Awarded second place at a national-level tabla competition organised by Hindustan Times, competing against players from across India"
     }
   ];
 
   const repertoire = [
-    { name: "Carnatic Vocals", level: "Advanced", years: "12 years" },
-    { name: "Mridangam", level: "Intermediate", years: "6 years" },
-    { name: "Music Composition", level: "Advanced", years: "8 years" },
-    { name: "Electronic Production", level: "Intermediate", years: "4 years" }
+    { name: "Carnatic Vocals", level: "Advanced", years: "13 years" },
+    { name: "Tabla", level: "Advanced", years: "12 years" },
+    { name: "Guitar", level: "Exploring", years: "Beginner" },
+    { name: "Flute", level: "Exploring", years: "Beginner" },
+    { name: "Keyboard", level: "Exploring", years: "Beginner" },
+    { name: "Clapbox", level: "Intermediate", years: "Active" },
+    { name: "Music Production", level: "Learning", years: "DAW & Recording" },
+    { name: "Songwriting", level: "In Progress", years: "Original compositions" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div className="fixed inset-0 z-0">
+        <ImageWithFallback
+          src="https://images.unsplash.com/photo-1rTikKt6ir5g"
+          alt="Tabla being played"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/95 via-red-900/90 to-orange-800/95" />
+      </div>
+
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-red-600/20" />
+      <div className="relative z-10 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-orange-600 hover:bg-orange-700">
                 <Music2 className="w-3 h-3 mr-1" />
-                Carnatic Fusion Artist
+                Carnatic Vocalist · Tabla Artist · One Man Band
               </Badge>
-              <h1 className="mb-6 text-orange-900">Musical Journey</h1>
-              <p className="text-orange-800 mb-6">
-                Blending the timeless beauty of Carnatic classical music with contemporary sounds to create a unique sonic experience.
-                Trained in traditional gurukul style while embracing modern production techniques.
+              <h1 className="mb-6 text-white">Back to the Raga</h1>
+              <p className="text-orange-100 mb-6">
+                13 years of Carnatic vocal training. 12 years on the tabla. A 6-year hiatus. And now — a return
+                to music with something new to say. Writing original songs, composing, singing, playing every
+                instrument, and producing it all myself. One man, many ragas.
               </p>
-              <div className="flex gap-4">
-                <button className="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors flex items-center gap-2">
-                  <PlayCircle className="w-5 h-5" />
-                  Listen to Performances
-                </button>
+              <div className="flex gap-4 flex-wrap">
+
+                  <a href="https://instagram.com/known_as_jj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors flex items-center gap-2"
+                >
+                  <Instagram className="w-5 h-5" />
+                  @known_as_jj
+                </a>
               </div>
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl transform rotate-3" />
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1641309049240-6d158eb7e7ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJuYXRpYyUyMG11c2ljJTIwaW5zdHJ1bWVudHN8ZW58MXx8fHwxNzYxOTk0OTY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Musical instruments"
+                src="https://unsplash.com/photos/a-close-up-of-a-person-playing-a-musical-instrument-rTikKt6ir5g"
+                alt="Tabla performance"
                 className="relative rounded-3xl w-full h-[400px] object-cover shadow-2xl"
               />
             </div>
@@ -69,10 +82,10 @@ export function MusicPortfolio() {
       </div>
 
       {/* Repertoire Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-orange-900">Musical Expertise</h2>
-          <p className="text-orange-700">Skills honed through years of dedicated practice and performance</p>
+          <h2 className="mb-4 text-white">Musical Palette</h2>
+          <p className="text-orange-200">A lifelong student — trained in the classical tradition, exploring new sounds</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {repertoire.map((skill, index) => (
@@ -94,30 +107,30 @@ export function MusicPortfolio() {
         </div>
       </div>
 
-      {/* Performances Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* Achievements Section */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-orange-900">Recent Performances</h2>
-          <p className="text-orange-700">Sharing the gift of music with audiences across India</p>
+          <h2 className="mb-4 text-white">Highlights</h2>
+          <p className="text-orange-200">Milestones from the musical journey so far</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {performances.map((performance, index) => (
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {achievements.map((item, index) => (
             <Card key={index} className="border-orange-200 bg-white/70 backdrop-blur hover:shadow-xl transition-all hover:-translate-y-1">
               <CardHeader>
                 <div className="flex items-start justify-between mb-2">
-                  <Mic2 className="w-8 h-8 text-orange-600" />
+                  <Award className="w-8 h-8 text-orange-600" />
                   <Badge variant="outline" className="border-orange-300 text-orange-700">
-                    {performance.date}
+                    {item.date}
                   </Badge>
                 </div>
-                <CardTitle className="text-orange-900">{performance.title}</CardTitle>
+                <CardTitle className="text-orange-900">{item.title}</CardTitle>
                 <CardDescription className="flex items-center gap-1">
                   <Radio className="w-4 h-4" />
-                  {performance.venue}
+                  {item.venue}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-orange-800">{performance.description}</p>
+                <p className="text-orange-800">{item.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -125,15 +138,35 @@ export function MusicPortfolio() {
       </div>
 
       {/* Philosophy Section */}
-      <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white">
+      <div className="relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <Heart className="w-16 h-16 mx-auto mb-6 opacity-90" />
-          <h2 className="mb-6">Musical Philosophy</h2>
-          <p className="text-xl leading-relaxed opacity-95">
-            &quot;Music is the bridge between tradition and innovation. By honoring the ancient ragas of Carnatic music
-            while embracing modern technology, we create something timeless yet fresh. Every note carries the weight
-            of centuries and the excitement of discovery.&quot;
+          <Heart className="w-16 h-16 mx-auto mb-6 text-orange-300" />
+          <h2 className="mb-6 text-white">The Vision</h2>
+          <p className="text-xl leading-relaxed text-orange-100 mb-12">
+            After years away from music, I&apos;m coming back — not just to perform, but to create.
+            Writing my own songs, composing original pieces, playing every instrument myself,
+            and producing from the ground up. The goal is a sound that carries classical roots
+            into entirely new spaces.
           </p>
+
+          {/* Collaboration CTA */}
+          <div className="bg-white/10 border border-orange-300/30 rounded-2xl p-8 backdrop-blur">
+            <Star className="w-10 h-10 mx-auto mb-4 text-orange-300" />
+            <h3 className="text-2xl font-semibold text-white mb-3">Open to Collaborations</h3>
+            <p className="text-orange-100 mb-6">
+              Vocalists, instrumentalists, producers, beatmakers — if you feel the music, let&apos;s make something together.
+              Slide into my DMs on Instagram.
+            </p>
+
+              <a href="https://instagram.com/known_as_jj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors text-lg font-medium"
+            >
+              <Instagram className="w-6 h-6" />
+              @known_as_jj on Instagram
+            </a>
+          </div>
         </div>
       </div>
     </div>

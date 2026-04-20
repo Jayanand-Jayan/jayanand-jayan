@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Music2, Code2, GraduationCap, Menu, X } from 'lucide-react';
+import { Music2, Code2, GraduationCap, Menu, X, Home } from 'lucide-react';
 import { MusicPortfolio } from './components/MusicPortfolio';
 import { EngineeringPortfolio } from './components/EngineeringPortfolio';
 import { EducationPortfolio } from './components/EducationPortfolio';
+import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
 type PortfolioSection = 'home' | 'music' | 'engineering' | 'education';
 
@@ -32,7 +33,16 @@ export default function App() {
   };
 
   const HomePage = () => (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div className="fixed inset-0 z-0">
+        <ImageWithFallback
+          src="https://images.unsplash.com/photo-1742942965475-25d3b7bf2bfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMHBhdHRlcm58ZW58MXx8fHwxNzYxOTY2MjgyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/90 to-slate-900/95" />
+      </div>
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(236,72,153,0.2),transparent_50%)]" />
@@ -145,8 +155,8 @@ export default function App() {
               >
                 <span className="sr-only">Home</span>
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-blue-600" />
-                  <span>Portfolio</span>
+                  <Home className="w-4 h-4" />
+                  <span>Home</span>
                 </div>
               </button>
 
